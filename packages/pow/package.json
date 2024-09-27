@@ -1,0 +1,33 @@
+{
+  "name": "@pois/pow",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Integrate user-friendly PoW CAPTCHAs into your full-stack app, effortlessly.",
+  "repository": "zhousiru/pow",
+  "exports": {
+    "core": "./src/core/index.ts",
+    "server": "./src/server/index.ts",
+    "client": "./src/client/index.ts",
+    "react": "./src/react/index.ts"
+  },
+  "publishConfig": {
+    "exports": {
+      "core": {
+        "import": "./dist/core/index.js",
+        "types": "./dist/core/index.d.ts"
+      },
+      "server": {
+        "import": "./dist/server/index.js",
+        "types": "./dist/server/index.d.ts"
+      },
+      "client": {
+        "import": "./dist/client/index.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "react": {
+        "import": "./dist/react/index.js",
+        "types": "./dist/react/index.d.ts"
+      }
+    }
+  }
+}
