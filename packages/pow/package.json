@@ -1,6 +1,6 @@
 {
   "name": "@pois/pow",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "description": "Integrate user-friendly PoW CAPTCHAs into your full-stack app, effortlessly.",
   "repository": "zhousiru/pow",
@@ -29,5 +29,8 @@
         "types": "./dist/react/index.d.ts"
       }
     }
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
   }
 }

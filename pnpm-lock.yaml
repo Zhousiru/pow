@@ -4,6 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    typescript:
+      specifier: ^5.6.2
+      version: 5.6.2
+
 importers:
 
   .:
@@ -14,9 +20,15 @@ importers:
       eslint:
         specifier: ^9.11.1
         version: 9.11.1
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.11.1)
       eslint-plugin-react:
         specifier: ^7.37.0
         version: 7.37.0(eslint@9.11.1)
+      eslint-plugin-react-hooks:
+        specifier: 5.1.0-rc-3edc000d-20240926
+        version: 5.1.0-rc-3edc000d-20240926(eslint@9.11.1)
       globals:
         specifier: ^15.9.0
         version: 15.9.0
@@ -32,6 +44,12 @@ importers:
       typescript-eslint:
         specifier: ^8.7.0
         version: 8.7.0(eslint@9.11.1)(typescript@5.6.2)
+
+  packages/pow:
+    devDependencies:
+      typescript:
+        specifier: 'catalog:'
+        version: 5.6.2
 
 packages:
 
@@ -317,6 +335,18 @@ packages:
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+
+  eslint-config-prettier@9.1.0:
+    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+
+  eslint-plugin-react-hooks@5.1.0-rc-3edc000d-20240926:
+    resolution: {integrity: sha512-9E3TnhvxK6OWwG8EQyGlb2V9n0NQ+e1euW3Jj+t3M+6CkoBAKX25OPOn6QLK9Ylxib3xd4houOOUmrvwCSa8Jw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
   eslint-plugin-react@7.37.0:
     resolution: {integrity: sha512-IHBePmfWH5lKhJnJ7WB1V+v/GolbB0rjS8XYVCSQCZKaQCAUhMoVoOEn1Ef8Z8Wf0a7l8KTJvuZg5/e4qrZ6nA==}
@@ -1384,6 +1414,14 @@ snapshots:
       is-symbol: 1.0.4
 
   escape-string-regexp@4.0.0: {}
+
+  eslint-config-prettier@9.1.0(eslint@9.11.1):
+    dependencies:
+      eslint: 9.11.1
+
+  eslint-plugin-react-hooks@5.1.0-rc-3edc000d-20240926(eslint@9.11.1):
+    dependencies:
+      eslint: 9.11.1
 
   eslint-plugin-react@7.37.0(eslint@9.11.1):
     dependencies:
