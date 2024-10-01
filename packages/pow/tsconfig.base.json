@@ -1,4 +1,10 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": ["../../tsconfig.base.json", "./tsconfig.share.json"],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "ts-out"
+  },
   "include": ["src/core"]
 }

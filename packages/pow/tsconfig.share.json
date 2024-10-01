@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "ts-out",
+    "paths": {
+      "~/*": ["src/*/index"]
+    },
+    "baseUrl": "."
+  }
+}

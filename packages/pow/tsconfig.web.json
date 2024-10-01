@@ -1,4 +1,9 @@
 {
-  "extends": "../../tsconfig.web.json",
+  "extends": ["../../tsconfig.web.json", "./tsconfig.share.json"],
+  "references": [
+    {
+      "path": "./tsconfig.base.json"
+    }
+  ],
   "include": ["src/client", "src/react"]
 }

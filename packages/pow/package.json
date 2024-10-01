@@ -30,7 +30,13 @@
       }
     }
   },
+  "scripts": {
+    "check-type": "tsc -b",
+    "build": "check-type && tsx scripts/build"
+  },
   "devDependencies": {
+    "rollup": "^4.23.0",
+    "tsx": "^4.19.1",
     "typescript": "catalog:"
   }
 }
